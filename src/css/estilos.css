@@ -1,0 +1,134 @@
+:root {
+    /* Colores */
+    --color-cabecera-pie: hsl(0, 0%, 20%);
+    --color-borde-cuadro: rgb(221, 221, 221);
+    --color-boton-otros: hsl(123, 40%, 45%);
+    --color-boton-otros-oscuro: hsl(123, 40%, 35%);
+    --color-letras-notificacion: hsl(50, 99%, 51%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: var(--color-cabecera-pie);
+    color: white;
+    text-align: center;
+    padding: 2%;
+
+    #notificacion {
+        position: absolute;
+        display: inline-block; 
+        /* height: 17%; */
+        /* width: 17%; */
+        background-color: var(--color-boton-otros);
+        top: 3%;
+        left: 3%;
+        border-radius: 3%;
+        padding: 1%;
+        /* font-size: 14px; */
+        /* opacity: 0; */
+        color: var(--color-letras-notificacion);
+        transition: all 0.5s ease;
+    }
+
+    .oculto {
+        /* display: none; */
+        opacity: 0;
+        font-size: 13px;
+    }
+
+    nav {
+        display: flex;
+        gap: 40px;
+        padding-top: 2%;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+    }
+}
+
+main {
+    padding: 3% 5%;
+
+    #imagenes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /* gap: 1%; */
+
+        div {
+            border: 1px solid var(--color-borde-cuadro);
+            border-radius: 2%;
+            background-color: rgb(245, 245, 245);
+            padding: 1% 4%;
+            padding-bottom: 3%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(104%);
+            }
+
+            img {
+                /* padding: 5%; */
+                height: 150px;
+                /* width: 240px; */
+            }
+
+            h2,
+            p {
+                padding-top: 5%;
+                text-align: center;
+            }
+
+            button {
+                margin-top: 7.5%;
+                padding: 5%;
+                background-color: var(--color-boton-otros);
+                border: none;
+                border-radius: 5%;
+                color: white;
+                font-size: 15px;
+
+                &:hover {
+                    background-color: var(--color-boton-otros-oscuro);    
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    #contenido {
+        text-align: center;
+
+        h2,
+        p {
+            padding-top: 3%;
+        }
+
+    }
+}
+
+footer {
+    background-color: var(--color-cabecera-pie);
+    padding: 2%;
+    text-align: center;
+    color: white;
+}
