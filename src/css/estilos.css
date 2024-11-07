@@ -34,6 +34,8 @@ header {
         /* opacity: 0; */
         color: var(--color-letras-notificacion);
         transition: all 0.5s ease;
+
+        box-shadow: 5px 5px 12.5px rgba(192, 192, 192, 0.3);
     }
 
     .oculto {
@@ -78,6 +80,8 @@ main {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
             transition: transform 0.3s ease-in-out;
 
